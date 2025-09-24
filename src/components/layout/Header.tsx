@@ -24,7 +24,8 @@ const Header = () => {
     // Handle scroll effect
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 950);
+            const threshold = window.innerHeight * 0.95;
+            setIsScrolled(window.scrollY > threshold);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -38,7 +39,7 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
                 ? 'bg-white/90 dark:bg-primary-500/90 backdrop-blur-md shadow-lg'
                 : 'bg-primary-500/60 dark:bg-primary-500/60 backdrop-blur-sm'
                 }`}

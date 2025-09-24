@@ -1,6 +1,6 @@
 import { type Project } from '../../data/projects';
-import { FiGithub, FiExternalLink, FiStar, FiArrowRight } from 'react-icons/fi';
-import { HiOutlineChip, HiOutlineDatabase, HiOutlineCode, HiOutlineWifi } from 'react-icons/hi';
+import { FiGithub, FiExternalLink, FiArrowRight } from 'react-icons/fi';
+import { HiOutlineChip, HiOutlineDatabase, HiOutlineWifi } from 'react-icons/hi';
 
 interface ProjectCardProps {
     project: Project;
@@ -10,9 +10,8 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
     const categoryIcons = {
         'AI/ML': HiOutlineChip,
-        'Distributed Systems': HiOutlineDatabase,
-        'Full-Stack': HiOutlineCode,
-        'IoT': HiOutlineWifi,
+        'Distributed Systems': HiOutlineWifi,
+        'Data-Driven': HiOutlineDatabase,
     };
 
     const CategoryIcon = categoryIcons[project.category];
@@ -23,9 +22,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 return 'from-secondary-400 to-purple-400';
             case 'Distributed Systems':
                 return 'from-accent-400 to-blue-400';
-            case 'Full-Stack':
-                return 'from-warm-400 to-orange-400';
-            case 'IoT':
+            case 'Data-Driven':
                 return 'from-green-400 to-teal-400';
             default:
                 return 'from-gray-400 to-gray-500';

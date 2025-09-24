@@ -50,8 +50,8 @@ const Skills = () => {
                                 key={category.id}
                                 onClick={() => setActiveCategory(category.id)}
                                 className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${activeCategory === category.id
-                                        ? 'bg-gradient-to-r from-secondary-400 to-accent-400 text-white shadow-lg scale-105'
-                                        : 'bg-gray-100 dark:bg-primary-600 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-primary-500'
+                                    ? 'bg-gradient-to-r from-secondary-400 to-accent-400 text-white shadow-lg scale-105'
+                                    : 'bg-gray-100 dark:bg-primary-600 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-primary-500'
                                     }`}
                             >
                                 <span className="text-lg">{category.icon}</span>
@@ -123,29 +123,6 @@ const Skills = () => {
                                             </span>
                                         </div>
                                     ))}
-                                </div>
-                            </div>
-
-                            {/* Quick stats */}
-                            <div className="bg-gradient-to-br from-secondary-500 to-accent-500 rounded-xl p-8 text-white">
-                                <h3 className="text-xl font-bold mb-6">Quick Stats</h3>
-                                <div className="grid grid-cols-2 gap-6">
-                                    <div>
-                                        <div className="text-3xl font-bold">4+</div>
-                                        <div className="text-sm opacity-90">Years Programming</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-3xl font-bold">3+</div>
-                                        <div className="text-sm opacity-90">Years AI/ML</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-3xl font-bold">5</div>
-                                        <div className="text-sm opacity-90">Major Projects</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-3xl font-bold">1000+</div>
-                                        <div className="text-sm opacity-90">Event Attendees</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

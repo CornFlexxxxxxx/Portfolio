@@ -34,8 +34,7 @@ const Projects = () => {
         { value: 'all', label: 'All Projects', count: projects.length },
         { value: 'AI/ML', label: 'AI/ML', count: projects.filter(p => p.category === 'AI/ML').length },
         { value: 'Distributed Systems', label: 'Distributed', count: projects.filter(p => p.category === 'Distributed Systems').length },
-        { value: 'Full-Stack', label: 'Full-Stack', count: projects.filter(p => p.category === 'Full-Stack').length },
-        { value: 'IoT', label: 'IoT', count: projects.filter(p => p.category === 'IoT').length },
+        { value: 'Data-Driven', label: 'Data-Driven', count: projects.filter(p => p.category === 'Data-Driven').length },
     ];
 
     const sortedProjects = selectedCategory === 'all'
@@ -128,26 +127,6 @@ const Projects = () => {
                         </p>
                     </div>
                 )}
-
-                {/* Statistics */}
-                <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-secondary-400 mb-2">5+</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">Major Projects</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-accent-400 mb-2">15+</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-warm-400 mb-2">100K+</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">Data Points</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">Passion</div>
-                    </div>
-                </div>
             </div>
         </section>
     );

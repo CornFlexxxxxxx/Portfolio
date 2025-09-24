@@ -55,14 +55,12 @@ const About = () => {
                         relentless innovation, the "why not?" attitude, and the belief that a small team can change the world.
                     </p>
                     <p>
-                        Recently, I underwent what I call my{' '}
-                        <span className="text-secondary-400 font-semibold">"mindset revolution"</span>.
-                        I shifted from passively absorbing knowledge to actively seeking out the hardest problems.
-                        Whether it's fine-tuning transformer models, building distributed systems handling 150+ cores,
-                        or leading 1000+ person events, I now run toward complexity rather than away from it.
+                        Recently, I shifted from passively absorbing knowledge to <span className="text-secondary-300 font-semibold">actively challenging myself.</span>
+                        Whether it's going deeper into school work, learning independently, giving my best in associative activities,
+                        or seeking out hackathons and new experiences, I now embrace complexity rather than shy away from it.
                     </p>
                     <p>
-                        As I approach graduation, I'm not just looking for a job – I'm seeking to contribute to
+                        As I approach graduation, I'm not just looking for a job, I'm seeking to contribute to
                         something meaningful. The Bay Area represents more than a location; it's where my technical
                         skills, international perspective, and hunger for impact can converge to create real value.
                     </p>
@@ -74,28 +72,28 @@ const About = () => {
             content: (
                 <div className="space-y-6">
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        I'm motivated by the intersection of elegant code and human impact. Every line I write,
-                        every model I train, and every system I architect is guided by a simple question:{' '}
-                        <span className="text-gray-900 dark:text-white font-semibold italic">
-                            "How does this make someone's life better?"
-                        </span>
+                        I'm motivated by the intersection of elegant code, meaningful impact, and authentic collaboration.
+                        I thrive on learning with people who inspire me, understanding deeply what I do, and creating systems or models
+                        that truly make a difference. Autonomy, curiosity, and clear communication guide every project I take on.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                         <div className="p-4 bg-gradient-to-br from-secondary-50 to-accent-50 dark:from-secondary-900/20 dark:to-accent-900/20 rounded-lg border border-secondary-200 dark:border-secondary-800">
                             <HiOutlineLightningBolt className="text-secondary-400 text-2xl mb-2" />
                             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technical Excellence</h4>
                             <p className="text-sm text-gray-600 dark:text-gray-400">
-                                Not just writing code that works, but crafting solutions that scale, maintain, and inspire.
+                                I focus on building solutions that scale, maintain, and have a genuine impact, not just code that works.
                             </p>
                         </div>
                         <div className="p-4 bg-gradient-to-br from-accent-50 to-warm-50 dark:from-accent-900/20 dark:to-warm-900/20 rounded-lg border border-accent-200 dark:border-accent-800">
                             <HiOutlineAcademicCap className="text-accent-500 text-2xl mb-2" />
-                            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Lifelong Learning</h4>
+                            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Curiosity & Learning</h4>
                             <p className="text-sm text-gray-600 dark:text-gray-400">
-                                Every challenge is an opportunity to grow. Currently self-teaching finance alongside my AI studies.
+                                I embrace challenges as opportunities to learn, whether studying independently
+                                or collaborating with people who push me to grow.
                             </p>
                         </div>
                     </div>
+
                     <div className="mt-6">
                         <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Core Values</h4>
                         <div className="flex flex-wrap gap-2">
@@ -134,18 +132,6 @@ const About = () => {
                             </div>
                         </div>
                         <div className="flex gap-4">
-                            <div className="flex-shrink-0 w-12 h-12 bg-secondary-100 dark:bg-secondary-900/20 rounded-lg flex items-center justify-center">
-                                <span className="text-xl">🌍</span>
-                            </div>
-                            <div>
-                                <h4 className="font-semibold text-gray-900 dark:text-white">Cultural Bridge</h4>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                                    Being bilingual and having lived in both France and the US, I bring a unique perspective
-                                    that helps me navigate diverse teams and global challenges.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex gap-4">
                             <div className="flex-shrink-0 w-12 h-12 bg-accent-100 dark:bg-accent-900/20 rounded-lg flex items-center justify-center">
                                 <span className="text-xl">📈</span>
                             </div>
@@ -154,6 +140,28 @@ const About = () => {
                                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                     Currently teaching myself quantitative finance – because understanding markets helps
                                     me build better fintech solutions and showcases my intellectual curiosity.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-secondary-100 dark:bg-secondary-900/20 rounded-lg flex items-center justify-center">
+                                <span className="text-xl">🏄‍♂️</span>
+                            </div>
+                            <div>
+                                <h4 className="font-semibold text-gray-900 dark:text-white">Sports & Adventure</h4>
+                                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                    I stay active through volleyball, gym workouts, wakeboarding, snowboarding, and surfing — all ways to challenge myself physically and mentally.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-accent-100 dark:bg-accent-900/20 rounded-lg flex items-center justify-center">
+                                <span className="text-xl">🌍</span>
+                            </div>
+                            <div>
+                                <h4 className="font-semibold text-gray-900 dark:text-white">Culture & Learning</h4>
+                                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                    I enjoy learning languages like Italian and Spanish, exploring new cuisines through cooking and wine tasting, and discovering new cultures whenever possible.
                                 </p>
                             </div>
                         </div>
@@ -209,8 +217,8 @@ const About = () => {
                                 key={key}
                                 onClick={() => setActiveTab(key)}
                                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${activeTab === key
-                                        ? 'bg-secondary-400 text-white shadow-lg shadow-secondary-400/30'
-                                        : 'bg-white dark:bg-primary-500 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-primary-400'
+                                    ? 'bg-secondary-400 text-white shadow-lg shadow-secondary-400/30'
+                                    : 'bg-white dark:bg-primary-500 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-primary-400'
                                     }`}
                             >
                                 {tab.title}

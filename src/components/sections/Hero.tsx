@@ -6,7 +6,7 @@ const Hero = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     // Typing animation for roles
-    const roles = ['AI Engineer', 'NLP Specialist', 'Full-Stack Developer'];
+    const roles = ['AI Engineer', 'NLP Specialist', 'Data Scientist', 'ML Researcher'];
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [currentRole, setCurrentRole] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
@@ -68,22 +68,16 @@ const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 section-container text-center">
+            <div className="relative z-10 section-container text-center pt-16 sm:pt-20">
                 <div className={`max-w-4xl mx-auto space-y-8 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
-
-                    {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                        <HiOutlineSparkles className="text-accent-400" />
-                        <span className="text-sm font-medium text-white">Open to Opportunities</span>
-                    </div>
 
                     {/* Name */}
                     <div>
                         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-4">
                             Gabriel
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">
-                                Monteillard
+                            <span className="block uppercase text-transparent bg-clip-text bg-gradient-to-r from-accent-400 via-secondary-400 to-accent-400 animate-gradient">
+                                MONTEILLARD
                             </span>
                         </h1>
                     </div>
@@ -139,7 +133,7 @@ const Hero = () => {
                     </div>
 
                     {/* Social Links */}
-                    <div className="flex items-center justify-center gap-6 pt-8">
+                    <div className="flex items-center justify-center gap-6 pt-8 pb-8 sm:pb-12">
                         {socialLinks.map((social) => {
                             const Icon = social.icon;
                             return (
@@ -158,7 +152,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

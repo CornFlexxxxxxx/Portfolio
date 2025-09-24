@@ -45,6 +45,7 @@ export const experiences: Experience[] = [
             'Redesigned organizational system using Notion, improving coordination by 40%',
             'Managed crisis situations with real-time problem-solving',
         ],
+        tech: ['Event Management', 'Team Leadership', 'Public Speaking'],
     },
     {
         id: 'vesto',
@@ -76,6 +77,7 @@ export const experiences: Experience[] = [
             'Built international network of tech professionals and students',
             'Gained cross-cultural communication skills essential for global teams',
         ],
+        tech: ['Cross-Cultural Communication', 'Adaptability'],
     },
     {
         id: 'savencia',
