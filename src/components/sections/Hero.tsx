@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiCalendar } from 'react-icons/fi';
-import { HiOutlineSparkles } from 'react-icons/hi';
 
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(false);
