@@ -38,16 +38,9 @@ const Projects = () => {
         { value: 'IoT', label: 'IoT', count: projects.filter(p => p.category === 'IoT').length },
     ];
 
-    const filteredProjects = selectedCategory === 'all'
+    const sortedProjects = selectedCategory === 'all'
         ? projects
         : projects.filter(p => p.category === selectedCategory);
-
-    // Sort to show featured projects first
-    const sortedProjects = [...filteredProjects].sort((a, b) => {
-        if (a.featured && !b.featured) return -1;
-        if (!a.featured && b.featured) return 1;
-        return 0;
-    });
 
     return (
         <section id="projects" className="py-20 md:py-32 bg-white dark:bg-primary-500 relative overflow-hidden">
@@ -76,8 +69,8 @@ const Projects = () => {
                                     key={cat.value}
                                     onClick={() => setSelectedCategory(cat.value)}
                                     className={`px-4 py-2 rounded-lg font-medium text-sm whitespace-nowrap transition-all duration-300 ${selectedCategory === cat.value
-                                            ? 'bg-secondary-400 text-white shadow-lg shadow-secondary-400/30'
-                                            : 'bg-gray-100 dark:bg-primary-600 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-primary-700'
+                                        ? 'bg-secondary-400 text-white shadow-lg shadow-secondary-400/30'
+                                        : 'bg-gray-100 dark:bg-primary-600 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-primary-700'
                                         }`}
                                 >
                                     {cat.label}
@@ -94,8 +87,8 @@ const Projects = () => {
                         <button
                             onClick={() => setViewMode('grid')}
                             className={`p-2 rounded transition-all ${viewMode === 'grid'
-                                    ? 'bg-white dark:bg-primary-500 text-secondary-400 shadow-md'
-                                    : 'text-gray-500 dark:text-gray-400'
+                                ? 'bg-white dark:bg-primary-500 text-secondary-400 shadow-md'
+                                : 'text-gray-500 dark:text-gray-400'
                                 }`}
                             aria-label="Grid view"
                         >
@@ -104,8 +97,8 @@ const Projects = () => {
                         <button
                             onClick={() => setViewMode('list')}
                             className={`p-2 rounded transition-all ${viewMode === 'list'
-                                    ? 'bg-white dark:bg-primary-500 text-secondary-400 shadow-md'
-                                    : 'text-gray-500 dark:text-gray-400'
+                                ? 'bg-white dark:bg-primary-500 text-secondary-400 shadow-md'
+                                : 'text-gray-500 dark:text-gray-400'
                                 }`}
                             aria-label="List view"
                         >

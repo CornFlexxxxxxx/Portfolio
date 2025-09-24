@@ -5,7 +5,6 @@ export interface Project {
     longDescription: string;
     tech: string[];
     category: 'AI/ML' | 'Distributed Systems' | 'Full-Stack' | 'IoT';
-    featured: boolean;
     github?: string;
     demo?: string;
     image?: string;
@@ -25,7 +24,6 @@ export const projects: Project[] = [
         longDescription: 'Built during the Mistral AI Hackathon in 24 hours. Created a TypeScript REST API connecting a Minecraft bot to a Python MCP server, enabling complex autonomous behaviors through natural language commands.',
         tech: ['Python', 'TypeScript', 'MCP Protocol', 'REST API', 'Mistral AI'],
         category: 'AI/ML',
-        featured: true,
         github: 'https://github.com/CornFlexxxxxxx',
         highlights: [
             'Built in 24-hour hackathon at Mistral AI',
@@ -47,7 +45,6 @@ export const projects: Project[] = [
         longDescription: 'Developed comprehensive NLP pipeline with DistilBERT for sentiment classification and GPT-2 for text generation. Built interactive React interface for real-time model testing and visualization.',
         tech: ['Python', 'PyTorch', 'DistilBERT', 'GPT-2', 'React', 'FastAPI'],
         category: 'AI/ML',
-        featured: true,
         github: 'https://github.com/CornFlexxxxxxx',
         highlights: [
             'Fine-tuned on 100,000+ business reviews',
@@ -69,7 +66,6 @@ export const projects: Project[] = [
         longDescription: 'Built a Twitter-like platform with 7 microservices using sharded MongoDB for posts, Neo4j for social graphs, and Redis clustering for caching. Implemented automated CI/CD with Docker and Kubernetes.',
         tech: ['Java', 'Kubernetes', 'Docker', 'MongoDB', 'Neo4j', 'Redis', 'Apache Kafka'],
         category: 'Distributed Systems',
-        featured: true,
         github: 'https://github.com/CornFlexxxxxxx',
         highlights: [
             '7 independent microservices',
@@ -92,7 +88,6 @@ export const projects: Project[] = [
         longDescription: 'Developed a constrained VGG-style CNN for ship classification, optimizing architecture within 25-layer limit. Handled 3.86:1 class imbalance through intelligent weighting and spatial detail preservation.',
         tech: ['Python', 'TensorFlow', 'Computer Vision', 'CNN', 'NumPy'],
         category: 'AI/ML',
-        featured: false,
         github: 'https://github.com/CornFlexxxxxxx',
         highlights: [
             '82.69% accuracy on degraded images',
@@ -114,7 +109,6 @@ export const projects: Project[] = [
         longDescription: 'Developed a PoC for IoT washing machine management using 3-tier Data Lake architecture. Implemented real-time processing with Kafka and Spark Streaming, including anomaly detection and multi-channel alerts.',
         tech: ['Scala', 'Apache Kafka', 'Spark Streaming', 'Cassandra', 'MinIO', 'Elasticsearch'],
         category: 'IoT',
-        featured: false,
         github: 'https://github.com/CornFlexxxxxxx',
         highlights: [
             '3-tier Data Lake architecture',

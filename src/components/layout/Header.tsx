@@ -17,14 +17,14 @@ const Header = () => {
     // Social links
     const socialLinks = [
         { icon: FiGithub, href: 'https://github.com/CornFlexxxxxxx', label: 'GitHub' },
-        { icon: FiLinkedin, href: 'https://www.linkedin.com/in/gabriel-monteillard-6a0448153/', label: 'LinkedIn' },
+        { icon: FiLinkedin, href: 'https://linkedin.com/in/gabriel-monteillard-6a0448153/', label: 'LinkedIn' },
         { icon: FiMail, href: 'mailto:gabriel.monteillard@gmail.com', label: 'Email' },
     ];
 
     // Handle scroll effect
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
+            setIsScrolled(window.scrollY > 950);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -39,8 +39,8 @@ const Header = () => {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-white/80 dark:bg-primary-500/80 backdrop-blur-md shadow-lg'
-                : 'bg-transparent'
+                ? 'bg-white/90 dark:bg-primary-500/90 backdrop-blur-md shadow-lg'
+                : 'bg-primary-500/60 dark:bg-primary-500/60 backdrop-blur-sm'
                 }`}
         >
             <nav className="section-container">
@@ -48,7 +48,7 @@ const Header = () => {
                     {/* Logo / Name */}
                     <a
                         href="#hero"
-                        className="font-display font-bold text-xl md:text-2xl text-gray-900 dark:text-white hover:text-secondary-400 dark:hover:text-secondary-400 transition-colors"
+                        className="font-display font-bold text-xl md:text-2xl text-gray-700 dark:text-white hover:text-secondary-400 dark:hover:text-secondary-400 transition-colors"
                     >
                         GM<span className="text-secondary-400">.</span>
                     </a>

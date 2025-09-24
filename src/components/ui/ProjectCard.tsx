@@ -39,15 +39,6 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 animationDelay: `${index * 100}ms`,
             }}
         >
-            {/* Featured badge */}
-            {project.featured && (
-                <div className="absolute top-4 right-4 z-10">
-                    <span className="flex items-center gap-1 px-3 py-1 bg-yellow-400/90 text-yellow-900 text-xs font-bold rounded-full">
-                        <FiStar size={12} />
-                        Featured
-                    </span>
-                </div>
-            )}
 
             {/* Category indicator */}
             <div className={`h-1 bg-gradient-to-r ${getCategoryColor(project.category)}`}></div>
