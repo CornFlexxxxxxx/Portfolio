@@ -1,30 +1,86 @@
+import Header from './components/layout/Header';
+import Section from './components/layout/Section';
+import Footer from './components/layout/Footer';
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-600 flex items-center justify-center">
-      <div className="text-center space-y-6 p-8">
-        <h1 className="text-5xl md:text-7xl font-display font-bold text-white">
-          Gabriel Monteillard
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-200">
-          <span className="gradient-text font-semibold">AI Engineer</span> • Full-Stack Developer
-        </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <button className="btn-primary">
-            View Projects
-          </button>
-          <button className="btn-outline">
-            Contact Me
-          </button>
+    <div className="min-h-screen bg-white dark:bg-primary-500">
+      <Header />
+
+      {/* Hero Section */}
+      <Hero />
+
+      {/* About Section */}
+      <About />
+
+      {/* Projects Section - Placeholder */}
+      <Section id="projects">
+        <h2 className="text-4xl font-display font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Featured Projects
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="card p-6 hover:scale-105 transition-transform duration-300">
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                Project {i}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Project details coming soon...
+              </p>
+            </div>
+          ))}
         </div>
-        <div className="flex gap-3 justify-center flex-wrap pt-4">
-          <span className="tech-badge">PyTorch</span>
-          <span className="tech-badge">React</span>
-          <span className="tech-badge">TypeScript</span>
-          <span className="tech-badge">Kubernetes</span>
+      </Section>
+
+      {/* Experience Section - Placeholder */}
+      <Section id="experience" className="bg-gray-50 dark:bg-primary-600">
+        <h2 className="text-4xl font-display font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Experience
+        </h2>
+        <div className="max-w-3xl mx-auto">
+          <div className="card p-8">
+            <p className="text-gray-600 dark:text-gray-300 text-center">
+              Experience timeline coming soon...
+            </p>
+          </div>
         </div>
-      </div>
+      </Section>
+
+      {/* Skills Section - Placeholder */}
+      <Section id="skills">
+        <h2 className="text-4xl font-display font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Technical Skills
+        </h2>
+        <div className="flex flex-wrap gap-3 justify-center max-w-4xl mx-auto">
+          {['Python', 'PyTorch', 'React', 'TypeScript', 'Kubernetes', 'Docker', 'MongoDB', 'NLP', 'Computer Vision'].map((skill) => (
+            <span key={skill} className="tech-badge">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </Section>
+
+      {/* Contact Section - Placeholder */}
+      <Section id="contact" className="bg-gray-50 dark:bg-primary-600">
+        <h2 className="text-4xl font-display font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Let's Connect
+        </h2>
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            I'm actively seeking AI/ML opportunities in the San Francisco Bay Area starting February 2026.
+            Let's discuss how I can contribute to your team!
+          </p>
+          <a href="mailto:gabriel.monteillard@gmail.com" className="btn-primary">
+            Send Email
+          </a>
+        </div>
+      </Section>
+
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
