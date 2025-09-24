@@ -24,8 +24,8 @@ export const skillCategories: SkillCategory[] = [
             { name: 'Java', level: 4, category: 'languages' },
             { name: 'TypeScript', level: 4, category: 'languages' },
             { name: 'JavaScript', level: 4, category: 'languages' },
-            { name: 'Scala', level: 3, category: 'languages' },
-            { name: 'SQL', level: 3, category: 'languages' },
+            { name: 'Scala', level: 4, category: 'languages' },
+            { name: 'SQL', level: 4, category: 'languages' },
         ],
     },
     {
@@ -112,8 +112,6 @@ export const softSkills = [
     'Public Speaking',
     'Project Management',
     'Agile/Scrum',
-    'Technical Writing',
-    'Mentoring',
 ];
 
 export const languages = [
