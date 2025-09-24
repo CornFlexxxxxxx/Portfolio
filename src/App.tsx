@@ -3,6 +3,7 @@ import Section from './components/layout/Section';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
+import Projects from './components/sections/Projects';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
 
       {/* About Section */}
       <About />
+
+      {/* Projects Section */}
+      <Projects />
 
       {/* Projects Section - Placeholder */}
       <Section id="projects">
