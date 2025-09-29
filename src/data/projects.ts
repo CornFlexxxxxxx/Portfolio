@@ -7,6 +7,7 @@ export interface Project {
     category: 'AI/ML' | 'Distributed Systems' | 'Data-Driven';
     github?: string;
     demo?: string;
+    video?: string;  // Added video field
     image?: string;
     highlights: string[];
     metrics?: {
@@ -25,6 +26,7 @@ export const projects: Project[] = [
         tech: ['Python', 'TypeScript', 'MCP Protocol', 'REST API', 'Mistral AI'],
         category: 'AI/ML',
         github: 'https://github.com/BADSTART-Mistral-Hackathon-MCP/Minecraft-MistralMCP',
+        video: '/minecraft-mcp-demo.mp4',  // Add your video file path here
         highlights: [
             'Built in 24-hour hackathon at Mistral AI',
             'Bridges natural language to game actions',

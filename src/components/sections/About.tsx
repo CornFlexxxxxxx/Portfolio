@@ -183,9 +183,6 @@ const About = () => {
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
                         About Me
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-300">
-                        From French engineering excellence to Silicon Valley ambition
-                    </p>
                 </div>
 
                 {/* Highlights grid */}
