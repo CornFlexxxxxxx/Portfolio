@@ -73,6 +73,7 @@ export const skillCategories: SkillCategory[] = [
             { name: 'CI/CD', level: 4, category: 'devops' },
             { name: 'VMs/SSH/SCP', level: 4, category: 'devops' },
             { name: 'Azure', level: 3, category: 'devops' },
+            { name: 'AWS', level: 3, category: 'devops' },
         ],
     },
     {
