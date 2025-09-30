@@ -1,5 +1,5 @@
 import { experiences } from '../../data/experience';
-import { FiBriefcase, FiBook, FiUsers, FiMapPin, FiCalendar } from 'react-icons/fi';
+import { FiBriefcase, FiBook, FiUsers, FiMapPin, FiCalendar, FiAward } from 'react-icons/fi';
 
 const Experience = () => {
     const getTypeIcon = (type: string) => {
@@ -26,6 +26,11 @@ const Experience = () => {
             default:
                 return 'bg-gray-400';
         }
+    };
+
+    // Check if experience has a recommendation
+    const hasRecommendation = (expId: string) => {
+        return expId === 'vesto' || expId === 'epita';
     };
 
     return (
@@ -75,12 +80,17 @@ const Experience = () => {
                                             {exp.current && (
                                                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
                                             )}
+                                            {hasRecommendation(exp.id) && (
+                                                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center shadow-md">
+                                                    <FiAward size={14} className="text-white" />
+                                                </div>
+                                            )}
                                         </div>
 
                                         {/* Content */}
                                         <div className="ml-6 flex-1">
                                             <div className="bg-white dark:bg-primary-500/50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                                                <ExperienceCard exp={exp} />
+                                                <ExperienceCard exp={exp} hasRecommendation={hasRecommendation(exp.id)} />
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +101,7 @@ const Experience = () => {
                                         <div className={`w-1/2 ${isEven ? 'pr-8 text-right' : 'opacity-0'}`}>
                                             {isEven && (
                                                 <div className="bg-white dark:bg-primary-500/50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                                                    <ExperienceCard exp={exp} />
+                                                    <ExperienceCard exp={exp} hasRecommendation={hasRecommendation(exp.id)} />
                                                 </div>
                                             )}
                                         </div>
@@ -104,13 +114,18 @@ const Experience = () => {
                                             {exp.current && (
                                                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
                                             )}
+                                            {hasRecommendation(exp.id) && (
+                                                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center shadow-md">
+                                                    <FiAward size={14} className="text-white" />
+                                                </div>
+                                            )}
                                         </div>
 
                                         {/* Right side */}
                                         <div className={`w-1/2 ${!isEven ? 'pl-8' : 'opacity-0'}`}>
                                             {!isEven && (
                                                 <div className="bg-white dark:bg-primary-500/50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                                                    <ExperienceCard exp={exp} />
+                                                    <ExperienceCard exp={exp} hasRecommendation={hasRecommendation(exp.id)} />
                                                 </div>
                                             )}
                                         </div>
@@ -126,10 +141,20 @@ const Experience = () => {
 };
 
 // Experience Card Component
-const ExperienceCard = ({ exp }: { exp: typeof experiences[0] }) => (
+const ExperienceCard = ({ exp, hasRecommendation }: { exp: typeof experiences[0], hasRecommendation: boolean }) => (
     <>
         {/* Header */}
         <div className="mb-4">
+            {hasRecommendation && (
+                <a
+                    href="#about"
+                    className="inline-flex items-center gap-1 px-2 py-1 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 text-xs font-medium rounded-full hover:bg-yellow-100 dark:hover:bg-yellow-900/30 transition-colors mb-2"
+                    title="View recommendation letter"
+                >
+                    <FiAward size={12} />
+                    <span>Recommended</span>
+                </a>
+            )}
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                 {exp.role}
             </h3>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiChevronRight, FiGlobe, FiTrendingUp, FiUsers, FiCode } from 'react-icons/fi';
+import { FiChevronRight, FiGlobe, FiTrendingUp, FiUsers, FiCode, FiExternalLink, FiAward } from 'react-icons/fi';
 import { HiOutlineLightningBolt, HiOutlineAcademicCap } from 'react-icons/hi';
 
 const About = () => {
@@ -64,6 +64,102 @@ const About = () => {
                         something meaningful. The Bay Area represents more than a location; it's where my technical
                         skills, international perspective, and hunger for impact can converge to create real value.
                     </p>
+                </div>
+            ),
+        },
+        recommendations: {
+            title: 'Recommendations',
+            content: (
+                <div className="space-y-8">
+                    {/* Introduction */}
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        These recommendations from industry professionals and academic leaders speak to my
+                        technical capabilities, work ethic, and potential for impact.
+                    </p>
+
+                    {/* EPITA Recommendation */}
+                    <div className="bg-gradient-to-br from-gray-50 to-purple-50/30 dark:from-primary-700/30 dark:to-purple-900/10 rounded-xl p-6 border border-gray-200 dark:border-primary-500/50">
+                        <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                                <FiAward className="text-purple-500 text-xl" />
+                            </div>
+                            <div className="flex-grow">
+                                <h3 className="font-bold text-gray-900 dark:text-white mb-1">
+                                    EPITA - Research Engineer Recommendation
+                                </h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                                    Nicolas Boutry - Associate Professor & Chief of AI Major
+                                </p>
+                                <blockquote className="text-gray-600 dark:text-gray-300 italic mb-4 border-l-4 border-purple-400 pl-4">
+                                    "Gabriel combines an impressive set of technical skills with a genuine curiosity
+                                    for research and innovation. His work on projects such as fine-tuning
+                                    DistilBERT for sentiment analysis, designing a constrained VGG-style
+                                    CNN for ship classification under severe class imbalance, and building an
+                                    AI-powered Minecraft companion bot illustrates his ability to tackle
+                                    challenging problems with creativity, rigor, and perseverance."
+                                </blockquote>
+                                <blockquote className="text-gray-600 dark:text-gray-300 italic mb-4 border-l-4 border-purple-400 pl-4">
+                                    "Gabriel is a rare combination of strong technical expertise,
+                                    leadership ability, and personal maturity. I am confident that he will thrive as
+                                    a Research Engineer and bring substantial contributions to your team, both in
+                                    terms of innovation and team spirit."
+                                </blockquote>
+                                <a
+                                    href="/epita-recommendation.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-primary-600 text-purple-500 font-medium text-sm rounded-lg border border-purple-200 dark:border-purple-700 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
+                                >
+                                    <FiExternalLink />
+                                    View Full Letter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Vesto Recommendation */}
+                    <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 dark:from-primary-700/30 dark:to-secondary-900/10 rounded-xl p-6 border border-gray-200 dark:border-primary-500/50">
+                        <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-secondary-100 dark:bg-secondary-900/30 rounded-lg flex items-center justify-center">
+                                <FiAward className="text-secondary-500 text-xl" />
+                            </div>
+                            <div className="flex-grow">
+                                <h3 className="font-bold text-gray-900 dark:text-white mb-1">
+                                    Vesto - Software Development Internship
+                                </h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                                    Anne-Laurène Harmel - Co-founder & CTO
+                                </p>
+                                <blockquote className="text-gray-600 dark:text-gray-300 italic mb-4 border-l-4 border-secondary-400 pl-4">
+                                    "During his 6-month internship at Vesto as a web developer, Gabriel not only demonstrated strong
+                                    learning abilities, active listening, and deep understanding of complex topics, but also became a
+                                    key pillar of our team thanks to his proactivity and consistently positive attitude."
+                                </blockquote>
+                                <blockquote className="text-gray-600 dark:text-gray-300 italic mb-4 border-l-4 border-secondary-400 pl-4">
+                                    "I am confident that Gabriel will be a valuable asset to any tech team, not only for his ability to
+                                    rapidly develop technical skills, but also for his enthusiasm, team spirit, and curiosity."
+                                </blockquote>
+                                <a
+                                    href="/vesto-recommendation.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-primary-600 text-secondary-500 font-medium text-sm rounded-lg border border-secondary-200 dark:border-secondary-700 hover:bg-secondary-50 dark:hover:bg-secondary-900/20 transition-colors"
+                                >
+                                    <FiExternalLink />
+                                    View Full Letter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Summary note */}
+                    <div className="text-center p-4 bg-accent-50 dark:bg-accent-900/20 rounded-lg border border-accent-200 dark:border-accent-800">
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                            <span className="font-semibold text-gray-900 dark:text-white">Note:</span> These letters
+                            highlight my technical expertise, leadership capabilities, and ability to deliver impactful
+                            solutions in both academic and professional settings.
+                        </p>
+                    </div>
                 </div>
             ),
         },
