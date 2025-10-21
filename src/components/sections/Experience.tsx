@@ -147,7 +147,7 @@ const ExperienceCard = ({ exp, hasRecommendation }: { exp: typeof experiences[0]
         <div className="mb-4">
             {hasRecommendation && (
                 <a
-                    href="#about"
+                    href="#about-recommendations"
                     className="inline-flex items-center gap-1 px-2 py-1 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 text-xs font-medium rounded-full hover:bg-yellow-100 dark:hover:bg-yellow-900/30 transition-colors mb-2"
                     title="View recommendation letter"
                 >

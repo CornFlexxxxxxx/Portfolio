@@ -1,9 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiChevronRight, FiGlobe, FiTrendingUp, FiUsers, FiCode, FiExternalLink, FiAward } from 'react-icons/fi';
 import { HiOutlineLightningBolt, HiOutlineAcademicCap } from 'react-icons/hi';
 
 const About = () => {
     const [activeTab, setActiveTab] = useState('journey');
+
+    const [highlightRecommendations, setHighlightRecommendations] = useState(false);
+
+    useEffect(() => {
+        // Check if the URL hash is for recommendations
+        const handleHashChange = () => {
+            if (window.location.hash === '#about-recommendations') {
+                setActiveTab('recommendations');
+                setHighlightRecommendations(true);
+                // Remove highlight after animation
+                setTimeout(() => setHighlightRecommendations(false), 2000);
+            }
+        };
+
+        // Check on mount
+        handleHashChange();
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, []);
 
     const highlights = [
         {
@@ -78,7 +99,7 @@ const About = () => {
                     </p>
 
                     {/* EPITA Recommendation */}
-                    <div className="bg-gradient-to-br from-gray-50 to-purple-50/30 dark:from-primary-700/30 dark:to-purple-900/10 rounded-xl p-6 border border-gray-200 dark:border-primary-500/50">
+                    <div className={`bg-gradient-to-br from-gray-50 to-purple-50/30 dark:from-primary-700/30 dark:to-purple-900/10 rounded-xl p-6 border border-gray-200 dark:border-primary-500/50 transition-all duration-500 ${highlightRecommendations ? 'ring-4 ring-yellow-400 shadow-2xl shadow-yellow-400/20' : ''}`}>
                         <div className="flex items-start gap-4">
                             <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
                                 <FiAward className="text-purple-500 text-xl" />
@@ -118,7 +139,8 @@ const About = () => {
                     </div>
 
                     {/* Vesto Recommendation */}
-                    <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 dark:from-primary-700/30 dark:to-secondary-900/10 rounded-xl p-6 border border-gray-200 dark:border-primary-500/50">
+                    <div className={`bg-gradient-to-br from-gray-50 to-blue-50/30 dark:from-primary-700/30 dark:to-secondary-900/10 rounded-xl p-6 border border-gray-200 dark:border-primary-500/50 transition-all duration-500 ${highlightRecommendations ? 'ring-4 ring-yellow-400 shadow-2xl shadow-yellow-400/20' : ''
+                        }`}>
                         <div className="flex items-start gap-4">
                             <div className="flex-shrink-0 w-12 h-12 bg-secondary-100 dark:bg-secondary-900/30 rounded-lg flex items-center justify-center">
                                 <FiAward className="text-secondary-500 text-xl" />
@@ -304,6 +326,7 @@ const About = () => {
 
                 {/* Tabbed content */}
                 <div className="max-w-4xl mx-auto">
+                    <div id="about-recommendations" />
                     <div className="flex flex-wrap gap-2 mb-8 justify-center">
                         {Object.entries(tabs).map(([key, tab]) => (
                             <button
